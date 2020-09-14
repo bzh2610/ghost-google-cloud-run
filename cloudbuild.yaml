@@ -1,10 +1,8 @@
 #cloudbuild.yaml
 steps:
-- name: 'docker'
-  args: ['build', '-t']
+- name: 'gcr.io/cloud-builders/docker'
   env:
   - 'PORT=${_PORT}'
   - 'DOMAIN_SERVER=${_DOMAIN_SERVER}'
-- name: 'gcr.io/cloud-builders/docker'
   args: ['tag', 'ghost:latest', 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']
 images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']
