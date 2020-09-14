@@ -5,4 +5,4 @@ steps:
   - 'PORT=${_PORT}'
   - 'DOMAIN_SERVER=${_DOMAIN_SERVER}'
   args: ['build', 'tag', 'ghost:latest', 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA', '.']
-+images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']
+images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']
