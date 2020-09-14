@@ -4,5 +4,5 @@ steps:
   env:
   - 'PORT=${_PORT}'
   - 'DOMAIN_SERVER=${_DOMAIN_SERVER}'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA', '.',  "--build-arg", "PORT=${_PORT},DOMAIN_SERVER=${_DOMAIN_SERVER}"
 images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA']
