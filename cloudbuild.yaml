@@ -1,7 +1,7 @@
 #cloudbuild.yaml
 steps:
 - name: 'docker'
-  args: ['up', '-d']
+  args: ['build', '-t']
   env:
   - 'PORT=${_PORT}'
   - 'DOMAIN_SERVER=${_DOMAIN_SERVER}'
